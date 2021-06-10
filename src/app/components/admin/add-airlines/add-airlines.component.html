@@ -1,0 +1,27 @@
+<div>
+    <form (ngSubmit)="createAirlines()" [formGroup]="myForm">
+    <div class="form-group">
+      <label for="airlinename">Airline Name</label>
+      <input formControlName="airlinename" class="form-control"  aria-describedby="airlinename" placeholder="Enter Airline Name">
+      <small id="airlinename" class="form-text text-muted">Enter the new Airline</small>
+      <small *ngIf="myForm.get('airlinename').dirty && myForm.get('airlinename').invalid">Airline Name is invalid</small>
+    </div>
+    <div class="form-group">
+      <label for="uploadlogo">Upload Logo</label>
+      <input formControlName="uploadlogo" class="form-control"  aria-describedby="uploadlogo" placeholder="Upload Logo">
+    </div>
+    <div class="form-group">
+      <label for="contactno">Contact Number</label>
+      <input formControlName="contactno" class="form-control" aria-describedby="contactno" placeholder="Enter Contact Number">
+      <small id="contactno" class="form-text text-muted">We'll never share your number with anyone else.</small>
+    </div>
+    <div class="form-group">
+      <label for="contactaddress">Contact address</label>
+      <input formControlName="contactaddress" class="form-control" aria-describedby="contactaddress" placeholder="Enter Contact Address">
+      <small id="contactaddress" class="form-text text-muted">We'll never share your address with anyone else.</small>
+    </div>
+    
+    <button type="submit" class="btn btn-primary" [disabled]="myForm.invalid">Add Airline</button>
+    <!-- <button  type="submit" class="btn btn-primary">Submit</button> -->
+  </form></div>
+  

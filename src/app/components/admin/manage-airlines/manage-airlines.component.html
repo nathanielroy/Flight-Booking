@@ -1,0 +1,24 @@
+<div>
+    <app-admin-menu></app-admin-menu>
+    <br>
+    <table cellspacing="0">
+        <tr>
+            <td>Id</td>
+            <td>airline name</td>
+            <td>upload logo</td>
+            <td>contact no</td>
+            <td>contact address</td>
+            <td>Delete</td>
+        </tr>
+        <tr *ngFor="let airline of airlines">
+            
+            <td>{{airline.id}}</td>
+            <td>{{airline.airlinename}}</td>
+            <td>{{airline.uploadlogo}}</td>
+            <td>{{airline.contactno}}</td>
+            <td>{{airline.contactaddress}}</td>
+            <td><button (click)="deleteAirlines(airline.id)">Click</button></td>
+        </tr>
+    </table>
+    </div>
+    

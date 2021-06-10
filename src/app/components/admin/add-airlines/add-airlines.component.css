@@ -1,0 +1,15 @@
+div{
+    padding-top: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+input{
+    border-radius: 10px;
+}
+input.ng-invalid{
+    box-shadow: 0 0 5px red;
+}
+
+input.ng-valid{
+    box-shadow: 0 0 5px green;
+}
